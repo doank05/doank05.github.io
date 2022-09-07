@@ -11,7 +11,6 @@
 $source = 'https://63183c13f6b281877c66937c.mockapi.io/sapa/';
 $konten = file_get_contents($source);
 $datas = json_decode($konten, true);
-var_dump($datas);
 
 ?>
 <body>
@@ -36,15 +35,15 @@ var_dump($datas);
         <tbody class="table-group-divider">
           <tr>
             <th class="text-center">
-                Pesan Dari Dicky Ada gak Ya ?
+                Pesan Dari Dicky Hari Ini ?
             </th>
           </tr>
           
           <tr>
             <th class="text-center">
-              <form method="POST">
+<!--               <form method="POST">
                 <button type="submit" name="btn_req" value="btn_req" class="btn btn-primary">Request Gak Nih!</button>
-              </form>
+              </form> -->
             </th>
           </tr>
         </tbody>
@@ -56,9 +55,7 @@ var_dump($datas);
   <div class="output">
     <h3 class="text-center">
     <?php 
-        if(isset($_POST['btn_req'])) {
           print_r($save['kalimat']);
-        }
         ?>
       </h3>
   </div>
